@@ -7,14 +7,14 @@
 ```
 
 ## Group Study
-### 1Day - counter
-### 2Day - Router
+1Day - counter
+2Day - Router
 
 
 ## Personal Study
-### module Export Import
-### state props
-### jsx Array
-### conditional Render
-### life Cycle
-### useRef
+module Export Import
+state props
+jsx Array
+conditional Render
+life Cycle
+useRef
