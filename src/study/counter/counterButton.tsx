@@ -1,9 +1,13 @@
-import React, { useState } from 'react';
+import React from 'react';
 
-const counterButton = (props: any) => {
-    const { increase, decrease } = props;
+type counterProps = {
+    increase: () => void,
+    decrease: () => void,
+}
+
+const counterButton = ({ increase, decrease }: counterProps) => {
     return (
-        <div className='counter'>
+        <div id='contents'>
             <div>
                 <button onClick={increase}>+</button>
                 <button onClick={decrease}>-</button>

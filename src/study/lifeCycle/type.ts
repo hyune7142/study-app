@@ -1,7 +1,3 @@
-export type LifeCycleProp = {
-    solution: string
-}
-
 export interface ChildProp {
     name: string,
     onChange: (text: string) => void

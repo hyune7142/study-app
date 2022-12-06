@@ -14,7 +14,7 @@ const ConditionalRender = () => {
     }
 
     return (
-        <div>
+        <div  id="contents">
             {!send ? (
                 <>
                     <div>우리 사귈래?</div>

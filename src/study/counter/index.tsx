@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
-import CounterButton from '../atom/counterButton';
-import CounterView from '../atom/counterView';
+import CounterButton from './counterButton';
 
 const counter = () => {
     const [count, setCount] = useState(0);
@@ -14,8 +13,8 @@ const counter = () => {
     }
 
     return (
-        <div>
-            <CounterView count={count} />
+        <div id="contents">
+            <h1>{count}</h1>
             <CounterButton increase={increase} decrease={decrease}/>
         </div>
     );

@@ -9,7 +9,23 @@ html, body, #root {
   overflow: hidden;
 }
 
-.counter {
+a {
+  text-decoration: none;
+  color: black
+}
+
+#headerContents {
+  padding-top: 10px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+#contents {
+  padding: 20px;
   width: 100%;
   height: 100%;
   display: flex;

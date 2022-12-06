@@ -11,13 +11,17 @@ class ClassComp extends Component<ChildProp, State> {
         this._consoleLog('Class Comp - Unmount')
     }
 
+    getSnapshotBeforeUpdate(prevProps: Readonly<ChildProp>, prevState: Readonly<State>) {
+        return 'test' // return된 값은 didUpdate의 snapshot 인자로 전달됩니다.
+    }
+
     shouldComponentUpdate(nextProps: Readonly<ChildProp>, nextState: Readonly<State>, nextContext: any): boolean {
         return true;
     }
 
-    componentDidUpdate(prevProps: Readonly<ChildProp>, prevState: Readonly<State>, snapshot?: any): void {
+    componentDidUpdate(prevProps: Readonly<ChildProp>, prevState: Readonly<State>, snapshot?: string): void {
         const { name } = this.props;
-        this._consoleLog(`prev Name :: ${prevProps.name}, curr Name :: ${name}`);
+        this._consoleLog(`prev Name :: ${prevProps.name}, curr Name :: ${name}, snapShot :: ${snapshot}`);
     }
 
     _consoleLog(text: string) {
