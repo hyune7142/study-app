@@ -2,12 +2,19 @@
 
 ### get Start
 ```
-    npm install (first)
+    npm install
     npm start
 ```
 
-### 1.export, import
+## Group Study
+### 1Day - counter
+### 2Day - Router
 
-### 2. conditional Render
 
-### 3. Component LifeCycle (Class, Func)
+## Personal Study
+### module Export Import
+### state props
+### jsx Array
+### conditional Render
+### life Cycle
+### useRef
