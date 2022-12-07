@@ -6,5 +6,9 @@ export interface ChildProp {
 }
 
 export interface State {
-    [key: string]: any,
+    something: string,
+    obj: {
+        name: string,
+        age: number
+    }
 }

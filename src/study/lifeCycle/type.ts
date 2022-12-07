@@ -6,5 +6,5 @@ export interface ChildProp {
 }
 
 export interface State {
-    [key: string]: any,
+    [key: string]: unknown,
 }
