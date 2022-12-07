@@ -1,12 +1,15 @@
 import React from 'react';
-import { useNavigate } from 'react-router'
+import { useNavigate, useLocation } from 'react-router'
 
 const Header = () => {
+    const location = useLocation();
     const navigate = useNavigate();
     return (
         <header>
             <div id="headerContents">
-                <button onClick={() => navigate('/')}>Main</button>
+                {location.pathname !== '/' && (
+                    <button onClick={() => navigate('/')}>Main</button>
+                )}
             </div>
         </header>
     );
