@@ -1,20 +1,21 @@
 # React Study For Igloo
 
-### get Start
+#### get Start
 ```
     npm install
     npm start
 ```
 
-## Group Study
-1Day - counter
-2Day - Router
+
+#### Group Study
+1 Day - counter
+2 Day - Router
 
 
-## Personal Study
-module Export Import
-state props
-jsx Array
-conditional Render
-life Cycle
-useRef
+#### Personal Study
+1. module Export Import
+2. state props
+3. jsx Array
+4. useRef
+5. conditional Render
+6. life Cycle
