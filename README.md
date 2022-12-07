@@ -8,9 +8,9 @@
 
 
 #### Group Study
-1 Day - counter
-2 Day - Router
-
+- 1Day - counter
+- 2Day - router
+  
 
 #### Personal Study
 1. module Export Import
