@@ -9,7 +9,7 @@ const Main = () => {
             <ol>
                 {pages.map((item, key) => (
                     <li key={item.path}>
-                        <Link key={key} to={item.path}>{item.title}</Link>
+                        <Link to={item.path}>{item.title}</Link>
                     </li>
                 ))}
             </ol>

@@ -46,17 +46,15 @@ export const pages = [
 
 const RouteContainer = () => {
     return (
-        <body>
-            <BrowserRouter>
-                <Header />
-                <Routes>
-                    <Route path="*" element={<Main />} />
-                    {pages.map(item => (
-                        <Route key={item.title} path={item.path} element={item.element} />
-                    ))}
-                </Routes>
-            </BrowserRouter>
-        </body>
+        <BrowserRouter>
+            <Header />
+            <Routes>
+                <Route path="*" element={<Main />} />
+                {pages.map(item => (
+                    <Route key={item.title} path={item.path} element={item.element} />
+                ))}
+            </Routes>
+        </BrowserRouter>
     );
 };
 

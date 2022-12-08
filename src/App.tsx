@@ -3,9 +3,9 @@ import RouteContainer from './router';
 
 const App = () => {
   return (
-    <div>
+    <React.Fragment>
       <RouteContainer />
-    </div>
+    </React.Fragment>
   );
 };
 
