@@ -9,6 +9,7 @@ import LifeCycle from '../study/lifeCycle';
 import JsxReturn from '../study/jsxArray';
 import UseRef from '../study/useRef';
 import StateProps from '../study/stateProps';
+import TimeInterval from '../study/timeInterval';
 
 export const pages = [
     {
@@ -41,6 +42,11 @@ export const pages = [
         path: '/stateprops',
         element: <StateProps />
     },
+    {
+        title: 'time interval',
+        path: '/timeInterval',
+        element: <TimeInterval />
+    }
 ]
 
 
