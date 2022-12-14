@@ -1,0 +1,134 @@
+openapi: 3.0.3
+info:
+  title: IGLOO React Backend
+  description: 이글루 리액트 API 문서
+  version: 1.0.0
+servers:
+  - url: http://localhost:8080/api
+tags:
+  - name: Contacts
+    description: 연락처 예제 API
+paths:
+  /contacts:
+    get:
+      tags:
+        - Contacts
+      summary: 연락처 전체 조회
+      responses:
+        '200':
+          description: 연락처 전체 조회 성공
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Contact'
+    post:
+      tags:
+        - Contacts
+      summary: 새 연락처 추가
+      requestBody:
+        description: 새 연락처 정보
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                  example: 홍길동
+                  description: 이름
+                phone:
+                  type: string
+                  example: '01012341234'
+                  description: 전화번호
+        required: true
+      responses:
+        '200':
+          description: 새 연락처 추가 성공
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Contact'
+        '400':
+          description: 잘못된 이름 또는 전화번호
+          content:
+            text/plain:
+              example: 'No Name'
+    put:
+      tags:
+        - Contacts
+      summary: 기존 연락처 수정
+      description: ID는 기존값 유지
+      requestBody:
+        description: 수정된 연락처 정보
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Contact'
+      responses:
+        '200':
+          description: 연락처 수정 성공
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Contact'
+        '400':
+          description: ID가 없거나 해당 ID를 가진 연락처가 없을 때
+          content:
+            text/plain:
+              example: 'No ID'
+  /contacts/{id}:
+    get:
+      tags:
+        - Contacts
+      summary: ID로 연락처 검색
+      parameters:
+        - name: id
+          in: path
+          description: 연락처 ID
+          required: true
+          schema:
+            type: integer
+      responses:
+        '200':
+          description: 연락처 조회 성공
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Contact'
+    delete:
+      tags:
+        - Contacts
+      summary: ID로 연락처 삭제
+      parameters:
+        - name: id
+          in: path
+          description: 연락처 ID
+          required: true
+          schema:
+            type: integer
+      responses:
+        '200':
+          description: 연락처 삭제 성공
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Contact'
+components:
+  schemas:
+    Contact:
+      type: object
+      properties:
+        id:
+          type: integer
+          example: 1
+          description: 연락처 고유 ID
+        name:
+          type: string
+          example: 홍길동
+          description: 이름
+        phone:
+          type: string
+          example: '01012341234'
+          description: 전화번호

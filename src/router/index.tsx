@@ -9,7 +9,10 @@ import LifeCycle from '../study/lifeCycle';
 import JsxReturn from '../study/jsxArray';
 import UseRef from '../study/useRef';
 import StateProps from '../study/stateProps';
-import TimeInterval from '../study/timeInterval';
+import ControlUncontrol from '../study/controlUncontrol';
+import AxiosComp from '../study/axios';
+
+// 192.168.0.131:8080
 
 export const pages = [
     {
@@ -43,9 +46,14 @@ export const pages = [
         element: <StateProps />
     },
     {
-        title: 'time interval',
-        path: '/timeInterval',
-        element: <TimeInterval />
+        title: 'Control & Uncontrol',
+        path: '/controlUncontrol',
+        element: <ControlUncontrol />
+    },
+    {
+        title: 'Axios Test',
+        path: '/axios',
+        element: <AxiosComp />
     }
 ]
 

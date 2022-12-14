@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useLayoutEffect, useRef } from 'react';
 
-const TimeInterval = () => {
+const ControlUncontrol = () => {
     const inputRef = useRef<HTMLInputElement>(null);
     const [num, setNum] = useState(0);
     const [text, setText] = useState('');
@@ -51,4 +51,4 @@ const TimeInterval = () => {
     );
 };
 
-export default TimeInterval;
+export default ControlUncontrol;
