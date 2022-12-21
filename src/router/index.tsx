@@ -11,6 +11,7 @@ import UseRef from '../study/useRef';
 import StateProps from '../study/stateProps';
 import ControlUncontrol from '../study/controlUncontrol';
 import AxiosComp from '../study/axios';
+import StyledComp from '../study/styledComponent';
 
 // 192.168.0.131:8080
 
@@ -54,6 +55,11 @@ export const pages = [
         title: 'Axios Test',
         path: '/axios',
         element: <AxiosComp />
+    },
+    {
+        title: 'Styled-Components',
+        path: '/styled',
+        element: <StyledComp />
     }
 ]
 
