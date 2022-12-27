@@ -45,7 +45,7 @@ import RouteContainer from './router';
 //   }
 // `
 
-const lobalStyle = css`
+const GlobalStyle = css`
   * {box-sizing: border-box;}
 
   html, body, #root {
@@ -91,7 +91,7 @@ const App = () => {
   return (
     <React.Fragment>
       {/* <GlobalStyled /> */}
-      {/* <Global css={GlobalStyle}> */}
+        <Global styles={GlobalStyle} />
         <RouteContainer />
       {/* </Global> */}
     </React.Fragment>

@@ -12,6 +12,7 @@ import StateProps from '../study/stateProps';
 import ControlUncontrol from '../study/controlUncontrol';
 import AxiosComp from '../study/axios';
 import StyledComp from '../study/styledComponent';
+import UseMemoCallback from '../study/useMemo';
 
 // 192.168.0.131:8080
 
@@ -60,6 +61,11 @@ export const pages = [
         title: 'Styled-Components',
         path: '/styled',
         element: <StyledComp />
+    },
+    {
+        title: 'useMemo & useCallback',
+        path: '/useMemoCallback',
+        element: <UseMemoCallback/>
     }
 ]
 
