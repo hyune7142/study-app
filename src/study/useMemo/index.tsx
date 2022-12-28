@@ -76,7 +76,8 @@ const UseMemoCallback = () => {
                 <table>
                     <tbody>
                         {inputParams.map(item => formItem(item))}
-                        {/* <tr>
+                        {/* 
+                        <tr>
                             <th>아이디</th>
                             <td>
                                 <input type='text' value={id} onChange={e => setId(e.target.value)}/>

@@ -2,6 +2,7 @@ import React from 'react';
 // import { createGlobalStyle } from 'styled-components'
 import { Global, css } from '@emotion/react';
 import RouteContainer from './router';
+import ThemeContextAPI from './study/contextapi';
 
 // const GlobalStyled = createGlobalStyle`
 //   * {box-sizing: border-box;}
@@ -58,7 +59,6 @@ const GlobalStyle = css`
 
   a {
     text-decoration: none;
-    color: black
   }
 
   a:hover {
@@ -92,7 +92,9 @@ const App = () => {
     <React.Fragment>
       {/* <GlobalStyled /> */}
         <Global styles={GlobalStyle} />
-        <RouteContainer />
+        <ThemeContextAPI>
+          <RouteContainer />
+        </ThemeContextAPI>
       {/* </Global> */}
     </React.Fragment>
   );

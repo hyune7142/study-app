@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 // Study Sample Pages
 import Header from '../components/header';
@@ -13,6 +13,8 @@ import ControlUncontrol from '../study/controlUncontrol';
 import AxiosComp from '../study/axios';
 import StyledComp from '../study/styledComponent';
 import UseMemoCallback from '../study/useMemo';
+import styled, { css } from 'styled-components';
+import { ThemeContextType, ThemeContext } from '../study/contextapi';
 
 // 192.168.0.131:8080
 
@@ -70,16 +72,41 @@ export const pages = [
 ]
 
 
+const ThemeWrap = styled.div<{ theme: string }>`
+    ${({theme}) => {
+        if(theme === 'dark') {
+            return css`
+                background-color: black;
+                color: #ffffff;
+                a {
+                    color: #ffffff;
+                }
+            `
+        } else {
+            return css`
+                a {
+                    color: black;
+                }
+            `
+        }
+    }}
+`
+
+
 const RouteContainer = () => {
+    const themeContext = useContext(ThemeContext) as Pick<ThemeContextType, "theme">
+    const { theme } = themeContext;
     return (
         <BrowserRouter>
             <Header />
-            <Routes>
-                <Route path="*" element={<Main />} />
-                {pages.map(item => (
-                    <Route key={item.title} path={item.path} element={item.element} />
-                ))}
-            </Routes>
+            <ThemeWrap id='study-wrap' theme={theme}>
+                <Routes>
+                    <Route path="*" element={<Main />} />
+                    {pages.map(item => (
+                        <Route key={item.title} path={item.path} element={item.element} />
+                    ))}
+                </Routes>
+            </ThemeWrap>
         </BrowserRouter>
     );
 };
