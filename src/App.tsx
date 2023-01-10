@@ -3,6 +3,8 @@ import React from 'react';
 import { Global, css } from '@emotion/react';
 import RouteContainer from './router';
 import ThemeContextAPI from './study/contextapi';
+import store from './modules/store';
+import { Provider } from 'react-redux';
 
 // const GlobalStyled = createGlobalStyle`
 //   * {box-sizing: border-box;}
@@ -89,14 +91,14 @@ const GlobalStyle = css`
 
 const App = () => {
   return (
-    <React.Fragment>
+      <Provider store={store}>
       {/* <GlobalStyled /> */}
         <Global styles={GlobalStyle} />
-        <ThemeContextAPI>
-          <RouteContainer />
-        </ThemeContextAPI>
+          <ThemeContextAPI>
+            <RouteContainer />
+          </ThemeContextAPI>
       {/* </Global> */}
-    </React.Fragment>
+      </Provider>
   );
 };
 

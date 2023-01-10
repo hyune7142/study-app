@@ -13,6 +13,8 @@ import ControlUncontrol from '../study/controlUncontrol';
 import AxiosComp from '../study/axios';
 import StyledComp from '../study/styledComponent';
 import UseMemoCallback from '../study/useMemo';
+import ReduxCnt1 from '../study/reduxCounter1';
+import ReduxCnt2 from '../study/reduxCounter2';
 import styled, { css } from 'styled-components';
 import { ThemeContextType, ThemeContext } from '../study/contextapi';
 
@@ -68,7 +70,17 @@ export const pages = [
         title: 'useMemo & useCallback',
         path: '/useMemoCallback',
         element: <UseMemoCallback/>
-    }
+    },
+    {
+        title: 'Redux Counter 1',
+        path: '/reduxCnt1',
+        element: <ReduxCnt1/>
+    },
+    {
+        title: 'Redux Counter 2',
+        path: '/reduxCnt2',
+        element: <ReduxCnt2/>
+    },
 ]
 
 
